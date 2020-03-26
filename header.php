@@ -11,9 +11,7 @@ header("Content-type:text/html;charset=utf-8");
 //判断是否已安装
 define('APP_PATH',realpath(dirname(__FILE__)));
 define('DS',DIRECTORY_SEPARATOR);
-if(!is_file(APP_PATH.DS.'install/install.lock')){
-  @header("location:install/index.php");
-}
+
 
 /*支持库*/
 include_once "function.base.php";
@@ -171,7 +169,7 @@ if($id){
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
-  <title><?php echo $title;?>-YoungxjTools</title>
+  <title><?php echo $title;?></title>
   <meta name="keywords" content="<?php echo $keywords;?>" />
   <meta name="description" content="<?php echo $tools_settings['description'];?>" />
   <link rel="shortcut icon" href="<?php echo Tools_url;?>/favicon.ico">
@@ -184,10 +182,10 @@ if($id){
   <script type="text/javascript" src="<?php echo Tools_url;?>/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="<?php echo Tools_url;?>/css/layer/layer.js"></script>
   <script type="text/javascript" src="<?php echo Tools_url;?>/js/main.js"></script>
-  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:100,300,400,500,700,900">
   <style type="text/css">
   /*正文样式*/
-  body{font-family: "HanHei SC","PingHei","PingFang SC","微软雅黑","Helvetica Neue","Helvetica","Arial",sans-serif;font-size: 13px;line-height: 1.846;color: #666666;background-image: url(/images/background.png)}
+  body{font-family: "Noto Sans SC",PingFang SC,sans-serif;font-size: 13px;line-height: 1.846;color: #666666;background-image: url(https://cdn.jsdelivr.net/gh/Rayzggz/Bandbbs_wearappstore_CDN@latest/images/background.png)}
   /*主体头部空*/
   .clearfix{margin-top:40px;}
   /*返回内容设为隐藏*/
@@ -231,18 +229,11 @@ href="http://browsehappy.com">立即升级</a>
 <nav class="navbar navbar-default">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-        <span class="sr-only">导航按钮</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a href="<?php echo Tools_url;?>"><img src="<?php echo Tools_url;?>/images/logo.png" alt="YoungxjTools" class="logo" width="135px"></a>
+      <a href="https://wear.bandbbs.cn/"><img src="<?php echo Tools_url;?>/images/logo.png" alt="YoungxjTools" class="logo" width="135px"></a>
     </div><!-- /.navbar-header -->
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav navbar-right">
         <?php foreach($tools_links as $age){?><!--自定义导航目录-->
-        <li><a href="<?php echo $age['url'];?>" target="_blank"><?php echo $age['name'];?></a></li>
       <?php }?>
       <br/>
       <?php if (search=='2') {?>

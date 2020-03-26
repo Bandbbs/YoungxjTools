@@ -115,26 +115,7 @@ if(!$miw_token){
           <ul>
             <li <?php if(strpos($_SERVER['PHP_SELF'],'tools_list')){echo 'class="active"';}?>><a href="tools_list.php" >工具列表</a></li>
             <li <?php if(strpos($_SERVER['PHP_SELF'],'tools_inc')){echo 'class="active"';}?>><a href="tools_inc.php" >新增工具</a></li>
-            <li <?php if(strpos($_SERVER['PHP_SELF'],'tools_update')){echo 'class="active"';}?>><a href="tools_update.php" >上传工具</a></li>
-            <li <?php if(strpos($_SERVER['PHP_SELF'],'tools_down')){echo 'class="active"';}?>><a href="tools_down.php" >应用中心</a></li>
           </ul>
-        </li>
-        <li class="submenu <?php if(strpos($_SERVER['PHP_SELF'],'links_list')||strpos($_SERVER['PHP_SELF'],'links_inc')){echo 'open';}?>">
-          <a href="#"><i class="fa fa-th-list"></i> <span>友情链接管理</span> <i class="arrow fa fa-chevron-right"></i></a>
-          <ul>
-            <li <?php if(strpos($_SERVER['PHP_SELF'],'links_list')){echo 'class="active"';}?>><a href="links_list.php">友情链接列表</a></li>
-            <li <?php if(strpos($_SERVER['PHP_SELF'],'links_inc')){echo 'class="active"';}?>><a href="links_inc.php">新增链接</a></li>
-          </ul>
-        </li>
-        <li class="submenu <?php if(strpos($_SERVER['PHP_SELF'],'log_list')||strpos($_SERVER['PHP_SELF'],'log_inc')){echo 'open';}?>">
-          <a href="#"><i class="fa fa-th-list"></i> <span>时间轴管理</span> <i class="arrow fa fa-chevron-right"></i></a>
-          <ul>
-            <li <?php if(strpos($_SERVER['PHP_SELF'],'log_list')){echo 'class="active"';}?>><a href="log_list.php">时间轴列表</a></li>
-            <li <?php if(strpos($_SERVER['PHP_SELF'],'log_inc')){echo 'class="active"';}?>><a href="log_inc.php">新增时间轴</a></li>
-          </ul>
-        </li>
-        <li <?php if(strpos($_SERVER['PHP_SELF'],'talk_list')){echo 'class="active"';}?>>
-          <a href="talk_list.php"><i class="fa fa-cog"></i> <span>留言管理</span></a>
         </li>
         <li <?php if(strpos($_SERVER['PHP_SELF'],'tools_temp')){echo 'class="active"';}?>>
           <a href="tools_temp.php"><i class="fa fa-cog"></i> <span>主题设置</span></a>

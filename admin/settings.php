@@ -126,13 +126,13 @@ if(getParam('domain')=='logo'&&$_FILES["file"]){
         <div class="widget-content nopadding">
           <form action="settings.php?domain=setting" method="post" class="form-horizontal" name="setting">
             <div class="form-group">
-              <label for="" class="col-sm-3 col-md-3 col-lg-2 control-label">网站地址[需要填写http(s)://]：</label>
+              <label for="" class="col-sm-3 col-md-3 col-lg-2 control-label">CDN地址[需要填写http(s)://]：</label>
               <div class="col-sm-9 col-md-9 col-lg-10">
                 <div class="row">
                   <div class="col-md-6">
                     <div class="input-group input-group-sm">
                       <span class="input-group-addon"><i class="fa fa-drivers-license-o"></i></span>
-                      <input type="text" placeholder="网站地址" class="form-control" name="url" id="url" value="<?php echo $setting['url'];?>">
+                      <input type="text" placeholder="CDN地址" class="form-control" name="url" id="url" value="<?php echo $setting['url'];?>">
                     </div>
                   </div>
                 </div>
@@ -332,116 +332,6 @@ if(getParam('domain')=='logo'&&$_FILES["file"]){
                     <div class="input-group input-group-sm">
                       <span class="input-group-addon"><i class="fa fa-area-chart"></i></span>
                       <input type="text" placeholder="防QQ拦截消息" class="form-control" name="tz_msg" id="tz_msg" value="<?php echo $setting['tz_msg'];?>">
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="form-actions">
-              <input type="submit" value="修改" class="btn btn-primary" id="open-dialog">
-            </div>
-          </form>
-        </div>
-      </div>						
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-xs-12">
-      <div class="widget-box">
-        <div class="widget-title">
-          <span class="icon">
-            <i class="fa fa-envelope-open-o"></i>									
-          </span>
-          <h5>评论交互smtp设置</h5>
-        </div>
-        <div class="widget-content nopadding">
-          <form action="settings.php?domain=smtp" method="post" class="form-horizontal" name="smtp">
-            <div class="form-group">
-              <label for="" class="col-sm-3 col-md-3 col-lg-2 control-label">邮件地址</label>
-              <div class="col-sm-9 col-md-9 col-lg-10">
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="input-group input-group-sm">
-                      <span class="input-group-addon"><i class="fa fa-bookmark"></i></span>
-                      <input type="text" placeholder="smtp.qq.com" class="form-control" name="host" id="host" value="<?php echo $smtp['host'];?>">
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="" class="col-sm-3 col-md-3 col-lg-2 control-label">端口</label>
-              <div class="col-sm-9 col-md-9 col-lg-10">
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="input-group input-group-sm">
-                      <span class="input-group-addon"><i class="fa fa-cogs"></i></span>
-                      <input type="text" placeholder="25 / 465" class="form-control" name="port" id="port" value="<?php echo $smtp['port'];?>">
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="" class="col-sm-3 col-md-3 col-lg-2 control-label">发件人昵称</label>
-              <div class="col-sm-9 col-md-9 col-lg-10">
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="input-group input-group-sm">
-                      <span class="input-group-addon"><i class="fa fa-edit"></i></span>
-                      <input type="text" placeholder="发件人昵称" class="form-control" name="fromname" id="fromname" value="<?php echo $smtp['fromname'];?>">
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="" class="col-sm-3 col-md-3 col-lg-2 control-label">smtp账号</label>
-              <div class="col-sm-9 col-md-9 col-lg-10">
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="input-group input-group-sm">
-                      <span class="input-group-addon"><i class="fa fa-desktop"></i></span>
-                      <input type="text" placeholder="smtp账号" class="form-control" name="username" id="username" value="<?php echo $smtp['username'];?>">
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="" class="col-sm-3 col-md-3 col-lg-2 control-label">smtp密码</label>
-              <div class="col-sm-9 col-md-9 col-lg-10">
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="input-group input-group-sm">
-                      <span class="input-group-addon"><i class="fa fa-database"></i></span>
-                      <input type="password" placeholder="smtp密码" class="form-control" name="password" id="password" value="<?php echo $smtp['password'];?>">
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="" class="col-sm-3 col-md-3 col-lg-2 control-label">收件人(请勿与发件人相同)</label>
-              <div class="col-sm-9 col-md-9 col-lg-10">
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="input-group input-group-sm">
-                      <span class="input-group-addon"><i class="fa fa-hdd-o"></i></span>
-                      <input type="text" placeholder="收件人" class="form-control" name="add_email" id="add_email" value="<?php echo $smtp['add_email'];?>">
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="" class="col-sm-3 col-md-3 col-lg-2 control-label">邮件主题</label>
-              <div class="col-sm-9 col-md-9 col-lg-10">
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="input-group input-group-sm">
-                      <span class="input-group-addon"><i class="fa fa-map-o"></i></span>
-                      <input type="text" placeholder="邮件主题" class="form-control" name="sub" id="sub" value="<?php echo $smtp['sub'];?>">
                     </div>
                   </div>
                 </div>

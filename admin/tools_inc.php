@@ -189,8 +189,8 @@ $tools_navsort=$tools_up->query('select distinct tools_type from tools_list ORDE
                 <div class="row">
                   <div class="col-md-6">
                     <div class="input-group input-group-sm">
-                      <input type="radio"  name="type" value='1' id="type_off">外站
-                      <input type="radio"  name="type" value='0' id="type_on" checked="checked">内站
+                      <input type="radio"  name="type" value='1' id="type_off" checked="checked">外站
+                      <input type="radio"  name="type" value='0' id="type_on" >内站
                     </div>
                   </div>
                 </div>

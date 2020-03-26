@@ -31,7 +31,7 @@ if(getParam('sort')){
 
 <div class="container centent" style="padding-bottom:20px;">
   <ol class="breadcrumb" id="choose-tool">
-    <li class="active" data-class=".tool-item"><span>所有工具</span></li>
+    <li class="active" data-class=".tool-item"><span>所有APP</span></li>
     <?php foreach($tools_navsort as $age){?><!--分类导航目录优先-->
     <li data-class=".<?php if($age['tools_type']){echo pinyin($age['tools_type'], 'first');}else{echo 'qt';}?>"><span><?php echo $age['tools_type'];?></span></li>
   <?php }?>
@@ -79,7 +79,7 @@ if(getParam('sort')){
         <?php if(!$tools_list){
           echo '<div class="row row-centered">
           <div class="form-group" id="input-wrap">
-          <h1 class="text-center" style="font-size: 80px;">没有工具</h1>
+          <h1 class="text-center" style="font-size: 80px;">没有APP</h1>
           <h3 class="text-center"><script>text()</script></h3>
           </div>
           </div>';}?>
@@ -94,9 +94,9 @@ if(getParam('sort')){
                   </a>
                   <h3><a target="_blank" href="<?php echo $toolsurl;?>"><?php echo $age['title'];?></a></h3>
                   <span class="item-category">
-                    [<a target="_blank" rel="nofollow" href="<?php echo Tools_url;?>/?sort=<?php echo $age['tools_type'];?>"><?php echo $age['tools_type'];?></a>]
+                    [<a target="_blank" rel="nofollow" href="https://wear.bandbbs.cn/?sort=<?php echo $age['tools_type'];?>"><?php echo $age['tools_type'];?></a>]
                   </span>
-                  <a title="喜欢" class="likeable" href="javascript:ajax_love(<?php echo $age['id'];?>)" data-slug="coderunner" data-url="<?php echo Tools_url;?>" id="tools_love_<?php echo $age['id'];?>" <?php if ($_COOKIE["love_id_".$age['id']]) {echo 'style="color:red;"';}?>>
+                  <a title="喜欢" class="likeable" href="javascript:ajax_love(<?php echo $age['id'];?>)" data-slug="coderunner" data-url="https://wear.bandbbs.cn" id="tools_love_<?php echo $age['id'];?>" <?php if ($_COOKIE["love_id_".$age['id']]) {echo 'style="color:red;"';}?>>
                     <i class="fa fa-heart"></i>
                     <var><?php echo $age['tools_love'];?></var>
                   </a>
@@ -154,12 +154,12 @@ if(getParam('sort')){
       <a href="<?php echo $toolsurl;?>" target="_blank"><h3 class="maple-tool-name"><?php echo $age['title'];?></h3></a>
       <span class="maple-tool-describe"><?php echo $age['keyword'];?></span>
       <div class="maple-tool-tags">
-        <a target="_blank" rel="nofollow" href="<?php echo Tools_url;?>/?sort=<?php echo $age['tools_type'];?>"><span class="maple-tool-tag"  title="工具类型"><?php echo $age['tools_type'];?></span></a>
+        <a target="_blank" rel="nofollow" href="https://wear.bandbbs.cn/?sort=<?php echo $age['tools_type'];?>"><span class="maple-tool-tag"  title="APP类型"><?php echo $age['tools_type'];?></span></a>
         <span class="maple-tool-tag"  title="使用次数"><i class="fa fa-eye"></i> <?php echo $age['tools_number'];?></span>
         <span class="maple-tool-tag"  title="点赞" onclick="ajax_love(<?php echo $age['id'];?>)" id="tools_love_<?php echo $age['id'];?>" <?php if ($_COOKIE["love_id_".$age['id']]) {echo 'style="color:red;"';}?>><i class="fa fa-heart"></i> <?php echo $age['tools_love'];?></span>
       </div>
-      <span class="maple-tool-auth" title="工具作者"><i class="fa fa-user-circle-o"></i> <?php echo $age['tools_author'];?></span>
-      <a href="<?php echo $toolsurl;?>" target="_blank"><span class="maple-tool-in" title="点击打开工具"><i class="fa fa-sign-in"></i> Open</span></a>
+      <span class="maple-tool-auth" title="发布者"><i class="fa fa-user-circle-o"></i> <?php echo $age['tools_author'];?></span>
+      <a href="<?php echo $toolsurl;?>" target="_blank"><span class="maple-tool-in" title="点击下载"><i class="fa fa-sign-in"></i> Open</span></a>
     </div>
   </div>
 <?php }?>
@@ -186,22 +186,5 @@ if(getParam('sort')){
   $tools_links = $sp->findall(array('state'=>'0','type'=>'0'),"priority desc","*");
   if($tools_links){
     ?>
-    <div class="container links_">
-      <div class="links_bt">
-        <div class="links_bt_l">
-          <a href="javascript:;">友情链接</a>
-        </div>
-        <div class="links_bt_r">
-          <a href="<?php echo Tools_url;?>/about.php" rel="nofollow" target="_blank">申请</a>
-        </div>
-      </div>
-      <div class="links_lb">
-        <ul>
-          <?php foreach($tools_links as $age){?>
-            <li><a href="<?php echo $age['url'];?>" title="<?php echo $age['description'];?>" target="_blank"><?php echo $age['name'];?></a></li>
-          <?php }?>
-        </ul>
-      </div>
-    </div>
   <?php }?>
   <?php include 'footer.php';?>

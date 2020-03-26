@@ -227,8 +227,8 @@ if(getParam('domain') == 'update'){
                 <div class="row">
                   <div class="col-md-6">
                     <div class="input-group input-group-sm">
-                      <input type="radio"  name="type" value='1' id="type_off" <?php if($tools_up_id['type']=='1'){echo 'checked="checked"';}?>>外站
-                      <input type="radio"  name="type" value='0' id="type_on" <?php if($tools_up_id['type']=='0'){echo 'checked="checked"';}?>>内站
+                      <input type="radio"  name="type" value='1' id="type_off"<?php if($tools_up_id['type']=='1'){echo 'checked="checked"';}?>>外站
+                     <input type="radio"  name="type" value='0' id="type_on" <?php if($tools_up_id['type']=='0'){echo 'checked="checked"';}?>>内站
                     </div>
                   </div>
                 </div>
