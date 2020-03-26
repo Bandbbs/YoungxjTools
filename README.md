@@ -1,3 +1,9 @@
+# 分支介绍
+本分支为由于个人需要的修改版本，删除了大量代码，包括安装程序
+直接clone可能无法正常运行
+建议使用原版:https://github.com/Youngxj/YoungxjTools
+
+
 # YoungxjTools
 
 #### 项目介绍
